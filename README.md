@@ -93,19 +93,19 @@ All API requests from the frontend are seamlessly routed to the backend through 
 ### 1. CI/CD Successful Execution
 *(Insert a screenshot from your GitHub Actions tab showing the green checkmarks across the build and deploy jobs)*
 
-**[ CI/CD Pipeline Screenshot Here ]**
+![Actions](./screenshots/github-actions.png)
 
 ### 2. Docker Hub Image Repository
 *(Insert a screenshot of your Docker Hub account showing the recently pushed `my-frontend`, `my-backend`, and `my-nginx` images)*
 
-**[ Docker Hub Screenshot Here ]**
+![Docker](./screenshots/docker.png)
 
 ### 3. Application Deployment & Working UI
 *(Insert a screenshot showing the Angular UI loaded in the browser, specifically highlighting the Ubuntu VM's IP address in the URL bar instead of localhost)*
 
-**[ Live Application UI Screenshot Here ]**
+![App Interface](./screenshots/UI-demo.png)
 
 ### 4. Infrastructure Status & Nginx Setup
 *(Insert a screenshot of your terminal while connected to your VM running the `docker-compose ps` command, displaying all the active containers properly running)*
 
-**[ `docker-compose ps` Output Screenshot Here ]**
+![Infrastructure Status](./screenshots/docker-ps.png)
