@@ -1,4 +1,12 @@
 services:
+  nginx:
+    image: rahilsama99/my-nginx:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+      - backend
+      
   frontend:
     image: rahilsama99/my-frontend:latest
     build: ./frontend

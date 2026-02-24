@@ -20,6 +20,14 @@ jobs:
             - name: Set up Docker Buildx
               uses: docker/setup-buildx-action@v3
 
+            - name: Build and Push Nginx
+              uses: docker/build-push-action@v5
+              with:
+                  context: ./nginx
+                  push: true
+                  tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-nginx:latest
+                  platforms: linux/amd64
+
             - name: Build and Push Frontend
               uses: docker/build-push-action@v5
               with:
