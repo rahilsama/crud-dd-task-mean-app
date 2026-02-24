@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  frontend:
+    image: rahilsam99/my-frontend:latest
+    ports:
+      - "8081:8081" # Access your site at http://VM-IP:8081
+    depends_on:
+      - backend
+
+  backend:
+    image: rahilsam99/my-backend:latest
+    ports:
+      - "8080:8080"
+    environment:
+      # Even though you hardcoded it, keeping this is good practice
+      - MONGO_URL=mongodb://mongo:27017/dd_db
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:7
+    # We don't need to expose 27017 to the public internet, 
+    # only the backend needs to see it.
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
