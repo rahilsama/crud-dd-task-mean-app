@@ -26,7 +26,7 @@ jobs:
                   context: ./nginx
                   push: true
                   tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-nginx:latest
-                  platforms: linux/arm64
+                  platforms: linux/amd64
 
             - name: Build and Push Frontend
               uses: docker/build-push-action@v5
@@ -34,7 +34,7 @@ jobs:
                   context: ./frontend
                   push: true
                   tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-frontend:latest
-                  platforms: linux/arm64
+                  platforms: linux/amd64
 
             - name: Build and Push Backend
               uses: docker/build-push-action@v5
@@ -42,7 +42,7 @@ jobs:
                   context: ./backend
                   push: true
                   tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-backend:latest
-                  platforms: linux/arm64
+                  platforms: linux/amd64
 
     deploy-to-ec2:
         needs: build-and-push
