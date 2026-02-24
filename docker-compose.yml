@@ -1,6 +1,6 @@
 services:
   frontend:
-    image: rahilsam99/my-frontend:latest
+    image: rahilsama99/my-frontend:latest
     build: ./frontend
     ports:
       - "8081:8081" # Access your site at http://VM-IP:8081
@@ -8,7 +8,7 @@ services:
       - backend
 
   backend:
-    image: rahilsam99/my-backend:latest
+    image: rahilsama99/my-backend:latest
     build: ./backend
     ports:
       - "8080:8080"
