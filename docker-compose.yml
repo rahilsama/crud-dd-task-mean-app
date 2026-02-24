@@ -9,7 +9,6 @@ services:
       
   frontend:
     image: rahilsama99/my-frontend:latest
-    build: ./frontend
     ports:
       - "8081:8081" # Access your site at http://VM-IP:8081
     depends_on:
@@ -17,7 +16,6 @@ services:
 
   backend:
     image: rahilsama99/my-backend:latest
-    build: ./backend
     ports:
       - "8080:8080"
     environment:
