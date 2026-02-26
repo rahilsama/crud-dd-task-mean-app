@@ -16,9 +16,8 @@ The architecture features **Nginx as a Reverse Proxy**.
 *   MongoDB remains purely internal and is not exposed to the public internet, ensuring maximum security.
 
 > [!NOTE]
-> **This application is NOT meant to be run locally.** The containerized infrastructure has been explicitly pushed and deployed to an active AWS EC2 instance.
-> 
-> **Live IP Address:** [http://52.66.207.36/](http://52.66.207.36/)
+> **This application is NOT meant to be run locally.** The containerized infrastructure has been explicitly pushed and deployed to an active AWS EC2 instance. Which has stopped as of now. For demo contact repo Owner
+
 
 ## CI/CD Pipeline (GitHub Actions)
 The repository is equipped with a robust CI/CD pipeline defined in `.github/workflows/deploy.yml`. When a push is successfully merged into the `main` branch, the pipeline executes the following automated steps:
@@ -36,8 +35,7 @@ The repository is equipped with a robust CI/CD pipeline defined in `.github/work
 This application is currently deployed and running live on an AWS EC2 instance. The entire infrastructure is managed via Docker Compose.
 
 **Access the Live Application:**
-You can access the fully functional Angular frontend via the internet at the following static IP address:
-[http://52.66.207.36/](http://52.66.207.36/)
+The instance is paused, to get a demo please contact repo owner
 
 All API requests from the frontend are seamlessly routed to the backend through the Nginx reverse proxy running on the same VM.
 
